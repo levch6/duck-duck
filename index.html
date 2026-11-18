@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duck Desk: UI Elements</title>
+  <meta name="description" content="Ten common UI elements explained through a rubber duck debugging rental desk.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23FFD21F' stroke='%231D1B16' stroke-width='8'/><path d='M60 42h32v16H60z' fill='%23FF7A1A'/><circle cx='52' cy='36' r='6' fill='%231D1B16'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="duck" class="duck-art" viewBox="0 -30 220 210">
+      <path class="duck-yellow" d="M30 104C20 98 14 88 16 74c14 14 32 16 50 12 18-5 34-3 46 4l58 2c20 24 8 74-50 76H72c-32-3-44-34-42-64Z"/>
+      <circle class="duck-yellow" cx="140" cy="62" r="42"/>
+      <path class="duck-beak" d="M176 50c18 0 32 6 36 15-9 13-23 16-38 11Z"/>
+      <path class="duck-wing" d="M60 112c24-13 46-10 62 6-10 28-34 34-50 24-10-7-14-18-12-30Z"/>
+      <circle class="eye-open" cx="152" cy="52" r="7"/>
+      <circle class="eye-panic" cx="152" cy="52" r="12"/>
+      <circle class="eye-panic-dot" cx="154" cy="52" r="4"/>
+      <path class="eye-sleep" d="M143 54q9 8 18 0"/>
+      <path class="brow" d="M140 36l25 10"/>
+      <g class="extra-bowtie">
+        <path class="bow" d="M112 104 90 91v26Zm0 0 22-13v26Z"/>
+        <circle class="bow" cx="112" cy="104" r="5"/>
+      </g>
+      <g class="extra-shades">
+        <path class="shade-arm" d="M136 49 100 43"/>
+        <rect class="shade" x="134" y="41" width="40" height="20" rx="5"/>
+      </g>
+      <g class="extra-hat">
+        <rect class="hat" x="112" y="-24" width="50" height="40" rx="3"/>
+        <rect class="hat-band" x="112" y="4" width="50" height="9"/>
+        <rect class="hat" x="98" y="14" width="78" height="8" rx="4"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Rubber duck debugging, now with a front desk</p>
+        <h1>Duck Desk</h1>
+        <p class="lead">Explain your bug to a duck. Feel slightly silly. Fix the bug. This page tours ten UI elements, and each one is a working part of the desk.</p>
+      </div>
+      <figure class="hero-duck">
+        <div class="stage stage-large"><svg class="duck" viewBox="0 0 220 210" aria-hidden="true" focusable="false"><use href="#duck"/></svg></div>
+        <figcaption class="nameplate"><span class="plate-empty">Unnamed Duck</span><span class="plate-named">Officially Named Duck</span></figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <form class="wrap cards" autocomplete="off">
+
+      <section class="card" aria-labelledby="t1">
+        <div class="card-head"><span class="num">1</span><h2 id="t1">Radiobutton</h2></div>
+        <div class="demo demo-split">
+          <fieldset>
+            <legend>Duck size</legend>
+            <label class="choice"><input type="radio" name="size" value="pocket"> Pocket</label>
+            <label class="choice"><input type="radio" name="size" value="desk" checked> Desk</label>
+            <label class="choice"><input type="radio" name="size" value="bathtub"> Bathtub</label>
+            <label class="choice"><input type="radio" name="size" value="support"> Emotional support</label>
+          </fieldset>
+          <div class="stage"><svg class="duck" viewBox="0 0 220 210" aria-hidden="true" focusable="false"><use href="#duck"/></svg></div>
+        </div>
+        <p class="why"><strong>What it's for:</strong> picking exactly one option from a small set. Choosing a new option clears the previous one.</p>
+        <p class="why"><strong>Use it when:</strong> all options should stay visible and only one can be true. A duck cannot be two sizes.</p>
+      </section>
+
+      <section class="card" aria-labelledby="t2">
+        <div class="card-head"><span class="num">2</span><h2 id="t2">Checkbox</h2></div>
+        <div class="demo demo-split">
+          <fieldset>
+            <legend>Duck extras</legend>
+            <label class="choice"><input type="checkbox" name="extra" value="hat" checked> Top hat</label>
+            <label class="choice"><input type="checkbox" name="extra" value="shades"> Sunglasses</label>
+            <label class="choice"><input type="checkbox" name="extra" value="bowtie"> Bow tie</label>
+          </fieldset>
+          <div class="stage"><svg class="duck" viewBox="0 0 220 210" aria-hidden="true" focusable="false"><use href="#duck"/></svg></div>
+        </div>
+        <p class="why"><strong>What it's for:</strong> turning independent options on or off. Any number can be selected, including none.</p>
+        <p class="why"><strong>Use it when:</strong> choices do not exclude each other. A duck can absolutely wear all three.</p>
+      </section>
+
+      <section class="card" aria-labelledby="t3">
+        <div class="card-head"><span class="num">3</span><h2 id="t3">Text input</h2></div>
+        <div class="demo">
+          <label class="field-label" for="duck-name">Name your duck</label>
+          <input class="text" id="duck-name" name="duck-name" type="text" maxlength="24" pattern="[A-Za-z][A-Za-z '\-]*" placeholder="e.g. Sir Quacks-a-Lot" aria-describedby="name-output">
+          <p class="output" id="name-output">
+            <span class="name-empty">A duck with no name is just a bath accessory.</span>
+            <span class="name-ok">Splendid. The duck pretends to care.</span>
+            <span class="name-bad">Ducks cannot read digits. Letters only, please.</span>
+          </p>
+        </div>
+        <p class="why"><strong>What it's for:</strong> letting the user type free-form text on a single line, such as a name, an email or a search query.</p>
+        <p class="why"><strong>Use it when:</strong> the possible answers cannot be listed in advance. Type a valid name and the nameplate at the top updates.</p>
+      </section>
+
+      <section class="card" aria-labelledby="t4">
+        <div class="card-head"><span class="num">4</span><h2 id="t4">Tabs</h2></div>
+        <div class="demo tabs" role="group" aria-label="Duck care guide">
+          <input class="vh" type="radio" name="care" id="tab-feed" checked>
+          <input class="vh" type="radio" name="care" id="tab-bath">
+          <input class="vh" type="radio" name="care" id="tab-talk">
+          <div class="tablist">
+            <label class="tab" for="tab-feed">Feeding</label>
+            <label class="tab" for="tab-bath">Bathing</label>
+            <label class="tab" for="tab-talk">Talking</label>
+          </div>
+          <div class="tabpanel" id="panel-feed">Do not feed the duck. It is rubber. It has never once been hungry, and it will not thank you for the crumbs in your keyboard.</div>
+          <div class="tabpanel" id="panel-bath">Weekly, in warm water. Squeeze gently afterwards, or the duck will whistle sadly through your next stand-up.</div>
+          <div class="tabpanel" id="panel-talk">Go line by line and say what the code really does. The duck never interrupts, which puts it ahead of most code reviews.</div>
+        </div>
+        <p class="why"><strong>What it's for:</strong> splitting related content into panels that share one space, with one panel visible at a time.</p>
+        <p class="why"><strong>Use it when:</strong> people need one section at a time and do not have to compare them side by side.</p>
+      </section>
+
+      <section class="card" aria-labelledby="t5">
+        <div class="card-head"><span class="num">5</span><h2 id="t5">Button</h2></div>
+        <div class="demo demo-split squeak-box">
+          <div>
+            <div class="button-row">
+              <button class="btn" id="squeak" type="button">Squeak the duck</button>
+              <button class="btn btn-quiet" type="reset">Reset the desk</button>
+              <button class="btn btn-quiet" type="button" disabled>Refund</button>
+            </div>
+            <p class="output">
+              <span class="squeak-idle">No squeaks yet. Suspiciously quiet.</span>
+              <span class="squeak-done">The duck has been squeaked.</span>
+              <span class="squeak-now">SQUEAK!</span>
+            </p>
+          </div>
+          <div class="stage"><svg class="duck" viewBox="0 0 220 210" aria-hidden="true" focusable="false"><use href="#duck"/></svg></div>
+        </div>
+        <p class="why"><strong>What it's for:</strong> starting an action right now, such as saving, sending or, in this case, squeaking.</p>
+        <p class="why"><strong>Use it when:</strong> a click should do something. Reset restores every control on this page. Refund is disabled, because ducks keep the crumbs.</p>
+      </section>
+
+      <section class="card" aria-labelledby="t6">
+        <div class="card-head"><span class="num">6</span><h2 id="t6">Text label</h2></div>
+        <div class="demo">
+          <label class="field-label" for="ticket">Bug ticket number</label>
+          <input class="text" id="ticket" name="ticket" type="text" placeholder="QUACK-404">
+          <p class="output">Click the words "Bug ticket number" and the cursor jumps into the field.</p>
+        </div>
+        <p class="why"><strong>What it's for:</strong> static text that names or describes something. The user reads it but cannot edit it.</p>
+        <p class="why"><strong>Use it when:</strong> a control needs a visible name. A linked label also gives a bigger click target and helps screen readers.</p>
+      </section>
+
+      <section class="card" aria-labelledby="t7">
+        <div class="card-head"><span class="num">7</span><h2 id="t7">Link</h2></div>
+        <div class="demo">
+          <ul class="links">
+            <li><a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank" rel="noopener noreferrer">Read about rubber duck debugging</a> <span class="muted">(opens in a new tab)</span></li>
+            <li><a href="#t10">Jump to the duck roster</a> <span class="muted">(same page)</span></li>
+          </ul>
+        </div>
+        <p class="why"><strong>What it's for:</strong> taking the user somewhere else: another site, another page or another spot on this one.</p>
+        <p class="why"><strong>Use it when:</strong> the result is navigation. If the click performs an action instead, it should be a button.</p>
+      </section>
+
+      <section class="card" aria-labelledby="t8">
+        <div class="card-head"><span class="num">8</span><h2 id="t8">Tooltip</h2></div>
+        <div class="demo demo-tip">
+          <span class="tip">
+            <button class="btn btn-quiet" type="button" aria-describedby="tip-text">What is a quack-off?</button>
+            <span class="tooltip" id="tip-text" role="tooltip">Two ducks, one bug. Whichever stares longer gets the credit.</span>
+          </span>
+        </div>
+        <p class="why"><strong>What it's for:</strong> a short hint that appears on hover or keyboard focus and disappears afterwards.</p>
+        <p class="why"><strong>Use it when:</strong> the extra detail is helpful but not essential. Never hide required instructions in one.</p>
+      </section>
+
+      <section class="card wide" aria-labelledby="t9">
+        <div class="card-head"><span class="num">9</span><h2 id="t9">Dropdown list</h2></div>
+        <div class="demo demo-split">
+          <div>
+            <label class="field-label" for="mood">Duck mood</label>
+            <select class="text" id="mood" name="mood">
+              <option value="supportive" selected>Supportive</option>
+              <option value="judging">Quietly judging</option>
+              <option value="sleepy">Sleepy</option>
+              <option value="panicked">Panicked</option>
+            </select>
+            <p class="output">
+              <span class="quote q-supportive">"You've got this. Probably a missing semicolon."</span>
+              <span class="quote q-judging">"You named that variable what?"</span>
+              <span class="quote q-sleepy">"Wake me when the tests pass."</span>
+              <span class="quote q-panicked">"IS THAT PRODUCTION?!"</span>
+            </p>
+          </div>
+          <div class="stage"><svg class="duck" viewBox="0 0 220 210" aria-hidden="true" focusable="false"><use href="#duck"/></svg></div>
+        </div>
+        <p class="why"><strong>What it's for:</strong> choosing one value from a list that stays collapsed until it is opened, which saves space.</p>
+        <p class="why"><strong>Use it when:</strong> there are too many options for radiobuttons, or the choice is not important enough to keep on screen.</p>
+      </section>
+
+      <section class="card wide" aria-labelledby="t10">
+        <div class="card-head"><span class="num">10</span><h2 id="t10">Data grid</h2></div>
+        <div class="sorter" role="radiogroup" aria-label="Sort the duck roster">
+          <input class="vh" type="radio" name="sort" id="s0" aria-label="Original order" checked>
+          <input class="vh s1" type="radio" name="sort" id="s1a" aria-label="Duck, A to Z">
+          <input class="vh s1 dir-d" type="radio" name="sort" id="s1d" aria-label="Duck, Z to A">
+          <input class="vh s2" type="radio" name="sort" id="s2a" aria-label="Specialty, A to Z">
+          <input class="vh s2 dir-d" type="radio" name="sort" id="s2d" aria-label="Specialty, Z to A">
+          <input class="vh s3" type="radio" name="sort" id="s3a" aria-label="Bugs solved, lowest first">
+          <input class="vh s3 dir-d" type="radio" name="sort" id="s3d" aria-label="Bugs solved, highest first">
+          <input class="vh s4" type="radio" name="sort" id="s4a" aria-label="Crumbs per hour, lowest first">
+          <input class="vh s4 dir-d" type="radio" name="sort" id="s4d" aria-label="Crumbs per hour, highest first">
+          <input class="vh s5" type="radio" name="sort" id="s5a" aria-label="Status, A to Z">
+          <input class="vh s5 dir-d" type="radio" name="sort" id="s5d" aria-label="Status, Z to A">
+
+          <div class="grid-scroll" role="region" aria-labelledby="grid-caption" tabindex="0">
+            <table class="grid" role="table">
+              <caption id="grid-caption">Select a heading to sort ducks.</caption>
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col"><label for="s1a">Duck <span class="arrow" aria-hidden="true"></span></label><label class="to-desc" for="s1d">Duck <span class="arrow" aria-hidden="true"></span></label></th>
+                  <th role="columnheader" scope="col"><label for="s2a">Specialty <span class="arrow" aria-hidden="true"></span></label><label class="to-desc" for="s2d">Specialty <span class="arrow" aria-hidden="true"></span></label></th>
+                  <th role="columnheader" scope="col" class="n"><label for="s3a">Bugs solved <span class="arrow" aria-hidden="true"></span></label><label class="to-desc" for="s3d">Bugs solved <span class="arrow" aria-hidden="true"></span></label></th>
+                  <th role="columnheader" scope="col" class="n"><label for="s4a">Crumbs per hour <span class="arrow" aria-hidden="true"></span></label><label class="to-desc" for="s4d">Crumbs per hour <span class="arrow" aria-hidden="true"></span></label></th>
+                  <th role="columnheader" scope="col"><label for="s5a">Status <span class="arrow" aria-hidden="true"></span></label><label class="to-desc" for="s5d">Status <span class="arrow" aria-hidden="true"></span></label></th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                <tr role="row" style="--o1:6;--o2:4;--o3:5;--o4:2;--o5:2"><td role="cell">Sir Quacks-a-Lot</td><td role="cell">Null pointers</td><td role="cell" class="n">1204</td><td role="cell" class="n">12</td><td role="cell"><span class="badge free">Available</span></td></tr>
+                <tr role="row" style="--o1:4;--o2:5;--o3:3;--o4:5;--o5:6"><td role="cell">Regina Regex</td><td role="cell">Patterns nobody can read</td><td role="cell" class="n">868</td><td role="cell" class="n">20</td><td role="cell"><span class="badge judge">Judging someone</span></td></tr>
+                <tr role="row" style="--o1:2;--o2:6;--o3:4;--o4:3;--o5:3"><td role="cell">Duckie McStacktrace</td><td role="cell">Stack overflows</td><td role="cell" class="n">987</td><td role="cell" class="n">15</td><td role="cell"><span class="badge bath">In the bath</span></td></tr>
+                <tr role="row" style="--o1:1;--o2:1;--o3:1;--o4:1;--o5:1"><td role="cell">Captain Off-By-One</td><td role="cell">Loop boundaries</td><td role="cell" class="n">101</td><td role="cell" class="n">9</td><td role="cell"><span class="badge free">Available</span></td></tr>
+                <tr role="row" style="--o1:5;--o2:2;--o3:2;--o4:4;--o5:4"><td role="cell">Segfault Sally</td><td role="cell">Memory mysteries</td><td role="cell" class="n">642</td><td role="cell" class="n">18</td><td role="cell"><span class="badge bath">In the bath</span></td></tr>
+                <tr role="row" style="--o1:3;--o2:3;--o3:6;--o4:6;--o5:5"><td role="cell">Professor Bill</td><td role="cell">Merge conflicts</td><td role="cell" class="n">1530</td><td role="cell" class="n">25</td><td role="cell"><span class="badge judge">Judging someone</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="why"><strong>What it's for:</strong> showing many records in rows and columns so they can be scanned, compared and sorted.</p>
+        <p class="why"><strong>Use it when:</strong> every item has the same set of fields and people need to find or rank them.</p>
+      </section>
+
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p class="wrap">Lab work: UI elements. No ducks were harmed, though several were deeply disappointed by this code.</p>
+  </footer>
+</body>
+</html>
